@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kompass Deutschland — Your Compass to Germany | Educational Consultancy India to Germany</title>
+<meta name="description" content="India to Germany educational consultancy. Full support from university application to arrival and settlement. Founded by a Master's student in Germany.">
+<meta property="og:title" content="Kompass Deutschland — Your Compass to Germany">
+<meta property="og:description" content="From application to arrival — end-to-end guidance for Indian students moving to Germany.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --deep-blue: #1B365D;
+    --accent-blue: #2E5C8A;
+    --gold: #D4A017;
+    --gold-dark: #b8860b;
+    --dark-gray: #4A4A4A;
+    --light-gray: #F8FAFC;
+    --border: #E5E7EB;
+    --text: #1F2937;
+    --muted: #6B7280;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: #fff;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 0 var(--border);
+    z-index: 100;
+    padding: 16px 24px;
+  }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo-row { display: flex; align-items: center; gap: 10px; }
+  .compass {
+    width: 32px; height: 32px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .compass::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 2px; height: 22px;
+    background: linear-gradient(to bottom, var(--gold) 50%, var(--deep-blue) 50%);
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 1px;
+  }
+  .logo-text {
+    font-weight: 700;
+    color: var(--deep-blue);
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+  .logo-text span { color: var(--gold); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark-gray);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--deep-blue) !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+  }
+  .menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(27, 54, 93, 0.08);
+    border: 1px solid rgba(27, 54, 93, 0.1);
+    border-radius: 12px;
+    color: var(--deep-blue);
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .lang-switcher {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    background: rgba(27, 54, 93, 0.06);
+    padding: 6px 10px;
+    border-radius: 8px;
+  }
+  .lang-btn {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: none;
+    background: transparent;
+    color: var(--dark-gray);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .lang-btn.active {
+    background: var(--gold);
+    color: var(--deep-blue);
+  }
+  .lang-btn:hover {
+    color: var(--gold);
+  }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    top: 72px;
+    right: 24px;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 18px 20px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(27, 54, 93, 0.12);
+    width: calc(100% - 48px);
+    max-width: 320px;
+  }
+  .nav-links.open a {
+    display: block;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .menu-toggle { display: inline-flex; }
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #0d1b2f 0%, var(--deep-blue) 50%, var(--accent-blue) 100%);
+    color: #fff;
+    padding: 130px 24px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .hero-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .eyebrow {
+    display: inline-block;
+    background: rgba(212, 160, 23, 0.15);
+    color: var(--gold);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    border: 1px solid rgba(212, 160, 23, 0.3);
+  }
+  h1 {
+    font-size: clamp(32px, 6vw, 54px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+  h1 .highlight { color: var(--gold); }
+  .hero-sub {
+    font-size: clamp(16px, 2.5vw, 20px);
+    opacity: 0.9;
+    max-width: 640px;
+    margin: 0 auto 36px;
+    font-weight: 400;
+  }
+  .cta-row {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary, .btn-secondary {
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--deep-blue);
+    box-shadow: 0 6px 20px rgba(212, 160, 23, 0.35);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(212, 160, 23, 0.5); }
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+  }
+  .btn-secondary:hover { background: rgba(255, 255, 255, 0.2); }
+
+  /* SECTIONS */
+  section { padding: 80px 24px; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    color: var(--deep-blue);
+    text-align: center;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .section-sub {
+    text-align: center;
+    color: var(--muted);
+    max-width: 640px;
+    margin: 0 auto 60px;
+    font-size: 17px;
+  }
+
+  /* STATS BAR */
+  .stats {
+    background: var(--light-gray);
+    padding: 40px 24px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .stats-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--deep-blue);
+    line-height: 1;
+  }
+  .stat-num span { color: var(--gold); }
+  .stat-label {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    font-weight: 600;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  .service-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 24px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(27, 54, 93, 0.1);
+    border-color: transparent;
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: var(--deep-blue);
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .service-card h3 {
+    font-size: 18px;
+    color: var(--deep-blue);
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .service-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .service-card li {
+    font-size: 14px;
+    color: var(--dark-gray);
+    padding: 6px 0 6px 20px;
+    position: relative;
+  }
+  .service-card li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* COMMUNITY FEATURE */
+  .community {
+    background: linear-gradient(135deg, var(--deep-blue), var(--accent-blue));
+    color: #fff;
+    border-radius: 24px;
+    padding: 60px 40px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 900px;
+    position: relative;
+    overflow: hidden;
+  }
+  .community::before {
+    content: '';
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 200px; height: 200px;
+    background: rgba(212, 160, 23, 0.15);
+    border-radius: 50%;
+  }
+  .community-eyebrow {
+    display: inline-block;
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .community h2 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .community p {
+    font-size: 17px;
+    opacity: 0.9;
+    max-width: 640px;
+    margin: 0 auto 30px;
+  }
+  .avatars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .avatar-circle {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    border: 3px solid #fff;
+    margin-left: -12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--deep-blue);
+    font-size: 14px;
+  }
+  .avatar-circle:first-child { margin-left: 0; }
+
+  /* WHY US */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .why-card {
+    padding: 28px;
+    background: var(--light-gray);
+    border-radius: 16px;
+    border-left: 4px solid var(--gold);
+  }
+  .why-card h3 {
+    color: var(--deep-blue);
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .why-card p {
+    color: var(--dark-gray);
+    font-size: 14.5px;
+  }
+
+  /* FOUNDER */
+  .founder {
+    background: var(--light-gray);
+  }
+  .founder-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  @media (max-width: 640px) {
+    .founder-inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .founder-avatar { margin: 0 auto; }
+  }
+  .founder-avatar {
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: 800;
+    color: var(--deep-blue);
+    box-shadow: 0 20px 40px rgba(27, 54, 93, 0.15);
+    border: 6px solid #fff;
+  }
+  .founder-name {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .founder h2 {
+    text-align: left;
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 640px) { .founder h2 { text-align: center; } }
+  .founder p {
+    color: var(--dark-gray);
+    font-size: 15.5px;
+    margin-bottom: 12px;
+  }
+  .founder-title {
+    color: var(--muted);
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 8px;
+  }
+
+  /* CONTACT */
+  .contact {
+    background: linear-gradient(135deg, var(--deep-blue), var(--accent-blue));
+    color: #fff;
+  }
+  .contact h2 { color: #fff; }
+  .contact .section-sub { color: rgba(255, 255, 255, 0.85); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .contact-tile {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.2s;
+  }
+  .contact-tile:hover {
+    background: rgba(212, 160, 23, 0.15);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  .contact-icon {
+    width: 44px; height: 44px;
+    background: var(--gold);
+    color: var(--deep-blue);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .contact-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .contact-value {
+    font-size: 15px;
+    font-weight: 500;
+    word-break: break-all;
+  }
+  .booking-form {
+    max-width: 900px;
+    margin: 28px auto 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 18px;
+    padding: 24px;
+    display: grid;
+    gap: 14px;
+  }
+  .booking-form input,
+  .booking-form select,
+  .booking-form textarea {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text);
+    font: inherit;
+  }
+  .booking-form button {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 16px;
+    background: var(--gold);
+    color: var(--deep-blue);
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .booking-form .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .booking-note {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 4px;
+  }
+  @media (max-width: 640px) {
+    .booking-form .form-row { grid-template-columns: 1fr; }
+  }
+
+  /* FOOTER */
+  footer {
+    background: #0d1b2f;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 40px 24px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+  footer strong { color: var(--gold); }
+
+  /* SERVICE CARD ICONS */
+  .service-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  /* FAQ */
+  .faq-grid {
+    display: grid;
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .faq-trigger {
+    width: 100%;
+    padding: 18px 24px;
+    background: var(--light-gray);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: var(--deep-blue);
+    font-size: 15px;
+    transition: all 0.2s;
+  }
+  .faq-trigger:hover {
+    background: #f0f4f8;
+  }
+  .faq-trigger.active {
+    background: var(--gold);
+    color: var(--deep-blue);
+  }
+  .faq-icon {
+    font-size: 18px;
+    transition: transform 0.3s;
+  }
+  .faq-item.active .faq-icon {
+    transform: rotate(180deg);
+  }
+  .faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #fff;
+  }
+  .faq-item.active .faq-content {
+    max-height: 400px;
+  }
+  .faq-text {
+    padding: 18px 24px;
+    color: var(--dark-gray);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* WhatsApp Floating */
+  .wa-float {
+    position: fixed;
+    bottom: 24px; right: 24px;
+    width: 56px; height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 28px;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+    z-index: 99;
+    transition: transform 0.2s;
+  }
+  .wa-float:hover { transform: scale(1.1); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="logo-row">
+      <div class="compass"></div>
+      <div class="logo-text">KOMPASS <span>DEUTSCHLAND</span></div>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    <div class="nav-links" id="mobileNavLinks">
+      <a href="#services">Services</a>
+      <a href="#faq">FAQ</a>
+      <a href="#community">Community</a>
+      <a href="#why">Why Us</a>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="hi">हि</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+      </div>
+      <a href="#contact" class="nav-cta">Free Call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="eyebrow">India → Germany • End-to-End</div>
+    <h1>Your <span class="highlight">Compass</span> to Germany.</h1>
+    <p class="hero-sub">From your first university application to the day you're settled in a German city — we walk every step with you. Built by someone who walked it first.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn-primary">Book Free 30-min Call →</a>
+      <a href="https://wa.me/491791450753" class="btn-secondary">💬 Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num"><span>100%</span></div>
+      <div class="stat-label">India to Germany Focus</div>
+    </div>
+    <div>
+      <div class="stat-num">4 <span>Languages</span></div>
+      <div class="stat-label">EN • HI • TA • DE</div>
+    </div>
+    <div>
+      <div class="stat-num">On <span>Ground</span></div>
+      <div class="stat-label">Real Presence in Germany</div>
+    </div>
+    <div>
+      <div class="stat-num">End-to-<span>End</span></div>
+      <div class="stat-label">Application to Settlement</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-eyebrow">What We Do</div>
+    <h2>From Application to Arrival — <br>and Everything After.</h2>
+    <p class="section-sub">Most consultants stop when you get your visa. We start there and stay with you until Germany feels like home.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <div class="service-num">1</div>
+        <h3>University Application</h3>
+        <ul>
+          <li>Public & private university shortlisting</li>
+          <li>SoP, LOR & CV crafting</li>
+          <li>uni-assist coordination</li>
+          <li>Full submission & follow-up</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📄</div>
+        <div class="service-num">2</div>
+        <h3>Visa & Documentation</h3>
+        <ul>
+          <li>APS certificate guidance</li>
+          <li>Blocked account setup (Fintiba / Expatrio)</li>
+          <li>Health insurance (TK / AOK)</li>
+          <li>Embassy interview prep</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <div class="service-num">3</div>
+        <h3>Pre-Departure & Housing</h3>
+        <ul>
+          <li>Wohnheim & private housing search</li>
+          <li>Rental contract review</li>
+          <li>Cultural orientation</li>
+          <li>Airport pickup coordination</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📍</div>
+        <div class="service-num">4</div>
+        <h3>Post-Arrival Settlement</h3>
+        <ul>
+          <li>Anmeldung (city registration)</li>
+          <li>Bank account, SIM, transport pass</li>
+          <li>Ausländerbehörde paperwork</li>
+          <li>Werkstudent job guidance</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🗣️</div>
+        <div class="service-num">5</div>
+        <h3>German Language Teaching</h3>
+        <ul>
+          <li>Structured courses A1 → C1</li>
+          <li>Medical German & clinician modules</li>
+          <li>Exam prep (telc / Goethe) & certification support</li>
+          <li>Patient-facing translations & localization</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background: #fff; padding: 80px 24px;">
+  <div class="container">
+    <div class="section-eyebrow">Common Questions</div>
+    <h2>Frequently Asked Questions</h2>
+    <p class="section-sub" style="margin-bottom: 40px;">Everything you need to know about moving to Germany.</p>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <button class="faq-trigger"><span>How long does the entire process take from application to arrival?</span><span class="faq-icon">▼</span></button>
+        <div class="faq-content"><div class="faq-text">Typically 8-12 months depending on your university choice and visa processing time. We break it into clear milestones and keep you on track throughout.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger"><span>What is your fee structure?</span><span class="faq-icon">▼</span></button>
+        <div class="faq-content"><div class="faq-text">We offer transparent, milestone-based pricing with no hidden charges. Packages range from "Application Only" to "Full End-to-End" support. You pay for what you use, not upfront commissions.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger"><span>Do I need to have studied abroad to get into German universities?</span><span class="faq-icon">▼</span></button>
+        <div class="faq-content"><div class="faq-text">No. Many universities accept students with strong academics and English proficiency. We help optimize your profile for your target universities.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger"><span>How much money do I need to show in the blocked account?</span><span class="faq-icon">▼</span></button>
+        <div class="faq-content"><div class="faq-text">As of 2026, approximately €12,408 per year is required for a blocked account (Sperrkonto). We guide you through setting this up with providers like Fintiba or Expatrio.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger"><span>Can I work as a student in Germany?</span><span class="faq-icon">▼</span></button>
+        <div class="faq-content"><div class="faq-text">Yes! As an international student, you can work 120 full days or 240 half days per year. We provide guidance on finding Werkstudent jobs that fit your studies.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger"><span>What if my application gets rejected?</span><span class="faq-icon">▼</span></button>
+        <div class="faq-content"><div class="faq-text">We help you understand the rejection reason and strategize for the next cycle. We also identify backup universities to maximize your acceptance chances.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY FEATURE -->
+<section id="community" style="background: #fff;">
+  <div class="container">
+    <div class="community">
+      <div class="community-eyebrow">Our Difference</div>
+      <h2>Talk to Indians Already Living in Germany.</h2>
+      <p>You don't just get a consultant. You get access to our community of Indian students and professionals across Germany — people who lived every step you're about to take. Get your doubts cleared by someone who was in your shoes last year.</p>
+      <div class="avatars">
+        <div class="avatar-circle">AR</div>
+        <div class="avatar-circle">PS</div>
+        <div class="avatar-circle">KV</div>
+        <div class="avatar-circle">SM</div>
+        <div class="avatar-circle">TR</div>
+      </div>
+      <a href="#contact" class="btn-primary">Connect with Our Community →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="container">
+    <div class="section-eyebrow">Why Kompass Deutschland</div>
+    <h2>Not Just Consultants. <br>Fellow Travellers.</h2>
+    <p class="section-sub">We built this because we couldn't find it. Everything we wish we had when we made this move — now offered to you.</p>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Real Ground Presence</h3>
+        <p>Founded by a Master's student living and studying in Germany right now. Not a call-center consultancy.</p>
+      </div>
+      <div class="why-card">
+        <h3>Every Step Handled</h3>
+        <p>From SoP writing to your first Ausländerbehörde appointment — we don't stop at visa approval.</p>
+      </div>
+      <div class="why-card">
+        <h3>Honest, Transparent Pricing</h3>
+        <p>No hidden charges. Clear service tiers. Milestone-based payments. Pay for what you use.</p>
+      </div>
+      <div class="why-card">
+        <h3>Multi-Language Support</h3>
+        <p>English, Hindi, Tamil, or Deutsch — talk to us in whichever language you're most comfortable in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder">
+  <div class="founder-inner">
+    <div class="founder-avatar">TR</div>
+    <div>
+      <div class="founder-name">From the Founder</div>
+      <h2>"I walked this exact path — from Coimbatore to Chemnitz."</h2>
+      <p>Every form, every appointment, every "was jetzt?" moment. I lived through the surprise costs, the housing scramble, the paperwork maze at the Ausländerbehörde.</p>
+      <p>I built Kompass Deutschland so no student has to walk this path alone. If I could do it — you absolutely can.</p>
+      <div class="founder-title">— Theaneshwaran Ravi, Managing Director</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-eyebrow" style="color: var(--gold);">Get In Touch</div>
+    <h2>Let's Talk About Your <br>Germany Journey.</h2>
+    <p class="section-sub">Book a free 30-minute discovery call. No commitment. Just clarity.</p>
+
+    <div class="contact-grid">
+      <a href="tel:+491791450753" class="contact-tile">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">Germany</div>
+          <div class="contact-value">+49 179 1450753</div>
+        </div>
+      </a>
+      <a href="tel:+917339423615" class="contact-tile">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">India</div>
+          <div class="contact-value">+91 73394 23615</div>
+        </div>
+      </a>
+      <a href="https://wa.me/491791450753" class="contact-tile">
+        <div class="contact-icon">💬</div>
+        <div>
+          <div class="contact-label">WhatsApp</div>
+          <div class="contact-value">Chat with us</div>
+        </div>
+      </a>
+      <a href="mailto:hikompassdeutschland@gmail.com" class="contact-tile">
+        <div class="contact-icon">✉</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">hikompassdeutschland@gmail.com</div>
+        </div>
+      </a>
+    </div>
+
+    <form class="booking-form" id="bookingForm">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Email address" required>
+      </div>
+      <div class="form-row">
+        <select name="service" required>
+          <option value="">Select service</option>
+          <option>University application</option>
+          <option>Visa & documentation</option>
+          <option>Housing & pre-departure</option>
+          <option>Post-arrival settlement</option>
+          <option>German language teaching</option>
+        </select>
+        <input type="text" name="phone" placeholder="Phone number">
+      </div>
+      <textarea name="message" rows="4" placeholder="Tell us about your Germany journey"></textarea>
+      <button type="submit">Request a Free Call</button>
+      <div class="booking-note">This form is ready for email or CRM integration.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p><strong>KOMPASS DEUTSCHLAND</strong> &nbsp;•&nbsp; Educational Consultancy &nbsp;•&nbsp; India → Germany</p>
+  <p style="margin-top: 8px; font-size: 12px;">© 2026 Kompass Deutschland. All rights reserved.</p>
+</footer>
+
+<a href="https://wa.me/491791450753" class="wa-float" title="Chat on WhatsApp">💬</a>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileNavLinks = document.getElementById('mobileNavLinks');
+
+  if (menuToggle && mobileNavLinks) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileNavLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    mobileNavLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (mobileNavLinks.classList.contains('open')) {
+          mobileNavLinks.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
+
+  // ===== i18n: full EN / HI / DE language switching =====
+  const I18N_TARGETS = [
+    ['nav0', '.nav-links > a', 0], ['nav1', '.nav-links > a', 1],
+    ['nav2', '.nav-links > a', 2], ['nav3', '.nav-links > a', 3],
+    ['navCta', '.nav-links > a', 4],
+    ['heroEyebrow', '.hero .eyebrow', 0], ['heroH1', '.hero h1', 0],
+    ['heroSub', '.hero-sub', 0],
+    ['heroBtn1', '.hero .cta-row a', 0], ['heroBtn2', '.hero .cta-row a', 1],
+    ['s2n', '.stat-num', 1], ['s3n', '.stat-num', 2], ['s4n', '.stat-num', 3],
+    ['s1l', '.stat-label', 0], ['s3l', '.stat-label', 2], ['s4l', '.stat-label', 3],
+    ['eyeServices', '.section-eyebrow', 0], ['eyeFaq', '.section-eyebrow', 1],
+    ['eyeWhy', '.section-eyebrow', 2], ['eyeContact', '.section-eyebrow', 3],
+    ['h2Services', 'h2', 0], ['h2Faq', 'h2', 1], ['h2Community', 'h2', 2],
+    ['h2Why', 'h2', 3], ['h2Founder', 'h2', 4], ['h2Contact', 'h2', 5],
+    ['subServices', '.section-sub', 0], ['subFaq', '.section-sub', 1],
+    ['subWhy', '.section-sub', 2], ['subContact', '.section-sub', 3],
+    ['c1h', '.service-card h3', 0], ['c2h', '.service-card h3', 1],
+    ['c3h', '.service-card h3', 2], ['c4h', '.service-card h3', 3],
+    ['c5h', '.service-card h3', 4],
+    ['li0', '.service-card li', 0], ['li1', '.service-card li', 1], ['li2', '.service-card li', 2], ['li3', '.service-card li', 3],
+    ['li4', '.service-card li', 4], ['li5', '.service-card li', 5], ['li6', '.service-card li', 6], ['li7', '.service-card li', 7],
+    ['li8', '.service-card li', 8], ['li9', '.service-card li', 9], ['li10', '.service-card li', 10], ['li11', '.service-card li', 11],
+    ['li12', '.service-card li', 12], ['li13', '.service-card li', 13], ['li14', '.service-card li', 14], ['li15', '.service-card li', 15],
+    ['li16', '.service-card li', 16], ['li17', '.service-card li', 17], ['li18', '.service-card li', 18], ['li19', '.service-card li', 19],
+    ['q1', '.faq-trigger span:first-child', 0], ['q2', '.faq-trigger span:first-child', 1],
+    ['q3', '.faq-trigger span:first-child', 2], ['q4', '.faq-trigger span:first-child', 3],
+    ['q5', '.faq-trigger span:first-child', 4], ['q6', '.faq-trigger span:first-child', 5],
+    ['a1', '.faq-text', 0], ['a2', '.faq-text', 1], ['a3', '.faq-text', 2],
+    ['a4', '.faq-text', 3], ['a5', '.faq-text', 4], ['a6', '.faq-text', 5],
+    ['commEyebrow', '.community-eyebrow', 0], ['commP', '.community p', 0],
+    ['commBtn', '.community .btn-primary', 0],
+    ['w1h', '.why-card h3', 0], ['w2h', '.why-card h3', 1], ['w3h', '.why-card h3', 2], ['w4h', '.why-card h3', 3],
+    ['w1p', '.why-card p', 0], ['w2p', '.why-card p', 1], ['w3p', '.why-card p', 2], ['w4p', '.why-card p', 3],
+    ['founderName', '.founder-name', 0], ['founderP1', '.founder p', 0],
+    ['founderP2', '.founder p', 1], ['founderTitle', '.founder-title', 0],
+    ['cl0', '.contact-label', 0], ['cl1', '.contact-label', 1],
+    ['cl2', '.contact-label', 2], ['cl3', '.contact-label', 3],
+    ['waValue', '.contact-value', 2],
+    ['formBtn', '.booking-form button', 0], ['bookNote', '.booking-note', 0],
+    ['foot1', 'footer p', 0], ['foot2', 'footer p', 1]
+  ];
+  const I18N_PH = [
+    ['phName', 'input[name="name"]'],
+    ['phEmail', 'input[name="email"]'],
+    ['phPhone', 'input[name="phone"]'],
+    ['phMsg', 'textarea[name="message"]']
+  ];
+
+  const I18N = {
+    hi: {
+      nav0: 'सेवाएँ', nav1: 'सवाल-जवाब', nav2: 'कम्युनिटी', nav3: 'हम ही क्यों', navCta: 'फ्री कॉल',
+      heroEyebrow: 'भारत → जर्मनी • शुरुआत से अंत तक',
+      heroH1: 'जर्मनी के लिए आपका <span class="highlight">कम्पास</span>।',
+      heroSub: 'पहली यूनिवर्सिटी एप्लीकेशन से लेकर जर्मन शहर में बसने तक — हम हर कदम पर आपके साथ चलते हैं। इसे बनाया है उसने, जिसने खुद यह रास्ता तय किया।',
+      heroBtn1: 'फ्री 30-मिनट कॉल बुक करें →', heroBtn2: '💬 व्हाट्सएप पर बात करें',
+      s2n: '4 <span>भाषाएँ</span>', s3n: 'यहीं <span>मौजूद</span>', s4n: 'शुरू से <span>अंत तक</span>',
+      s1l: 'सिर्फ़ भारत से जर्मनी', s3l: 'जर्मनी में असली मौजूदगी', s4l: 'एप्लीकेशन से सेटलमेंट तक',
+      eyeServices: 'हम क्या करते हैं', eyeFaq: 'आम सवाल', eyeWhy: 'Kompass Deutschland ही क्यों', eyeContact: 'संपर्क करें',
+      h2Services: 'एप्लीकेशन से अराइवल तक — <br>और उसके बाद भी।',
+      h2Faq: 'अक्सर पूछे जाने वाले सवाल',
+      h2Community: 'उन भारतीयों से बात करें, जो पहले से जर्मनी में रहते हैं।',
+      h2Why: 'सिर्फ़ कंसल्टेंट नहीं। <br>हमसफ़र।',
+      h2Founder: '"मैंने यही रास्ता खुद तय किया है — कोयंबटूर से केम्निट्ज़ तक।"',
+      h2Contact: 'आइए बात करें आपके <br>जर्मनी सफ़र की।',
+      subServices: 'ज़्यादातर कंसल्टेंट वीज़ा मिलते ही रुक जाते हैं। हम वहीं से शुरू करते हैं और तब तक साथ रहते हैं जब तक जर्मनी घर जैसा न लगे।',
+      subFaq: 'जर्मनी जाने के बारे में वह सब कुछ, जो आपको जानना चाहिए।',
+      subWhy: 'हमने इसे इसलिए बनाया क्योंकि हमें यह कहीं नहीं मिला। वह सब कुछ जो इस सफ़र में हमें चाहिए था — अब आपके लिए।',
+      subContact: 'फ्री 30-मिनट डिस्कवरी कॉल बुक करें। कोई बंधन नहीं। सिर्फ़ साफ़ बात।',
+      c1h: 'यूनिवर्सिटी एप्लीकेशन', c2h: 'वीज़ा और डॉक्यूमेंटेशन', c3h: 'डिपार्चर से पहले और हाउसिंग', c4h: 'जर्मनी पहुँचने के बाद', c5h: 'जर्मन भाषा की पढ़ाई',
+      li0: 'पब्लिक और प्राइवेट यूनिवर्सिटी शॉर्टलिस्टिंग', li1: 'SoP, LOR और CV तैयार करना', li2: 'uni-assist कोऑर्डिनेशन', li3: 'पूरी सबमिशन और फ़ॉलो-अप',
+      li4: 'APS सर्टिफिकेट गाइडेंस', li5: 'ब्लॉक्ड अकाउंट सेटअप (Fintiba / Expatrio)', li6: 'हेल्थ इंश्योरेंस (TK / AOK)', li7: 'एम्बेसी इंटरव्यू की तैयारी',
+      li8: 'Wohnheim और प्राइवेट हाउसिंग की खोज', li9: 'रेंटल कॉन्ट्रैक्ट की जाँच', li10: 'कल्चरल ओरिएंटेशन', li11: 'एयरपोर्ट पिकअप कोऑर्डिनेशन',
+      li12: 'Anmeldung (सिटी रजिस्ट्रेशन)', li13: 'बैंक अकाउंट, सिम, ट्रांसपोर्ट पास', li14: 'Ausländerbehörde की काग़ज़ी कार्रवाई', li15: 'Werkstudent जॉब गाइडेंस',
+      li16: 'A1 से C1 तक स्ट्रक्चर्ड कोर्स', li17: 'मेडिकल जर्मन और क्लिनिशियन मॉड्यूल', li18: 'एग्ज़ाम प्रेप (telc / Goethe) और सर्टिफिकेशन', li19: 'ट्रांसलेशन और लोकलाइज़ेशन',
+      q1: 'एप्लीकेशन से अराइवल तक पूरी प्रक्रिया में कितना समय लगता है?',
+      a1: 'आम तौर पर 8-12 महीने, यूनिवर्सिटी और वीज़ा प्रोसेसिंग के हिसाब से। हम इसे साफ़ माइलस्टोन में बाँटते हैं और आपको ट्रैक पर रखते हैं।',
+      q2: 'आपकी फ़ीस कैसी है?',
+      a2: 'पारदर्शी, माइलस्टोन-आधारित प्राइसिंग — कोई छिपा चार्ज नहीं। पैकेज "सिर्फ़ एप्लीकेशन" से लेकर "पूरा एंड-टू-एंड" सपोर्ट तक हैं। आप वही चुकाते हैं जो इस्तेमाल करते हैं।',
+      q3: 'क्या जर्मन यूनिवर्सिटी में एडमिशन के लिए विदेश में पढ़ा होना ज़रूरी है?',
+      a3: 'नहीं। कई यूनिवर्सिटी मज़बूत एकेडेमिक्स और इंग्लिश प्रोफ़िशिएंसी वाले छात्रों को लेती हैं। हम आपकी प्रोफ़ाइल को टारगेट यूनिवर्सिटी के हिसाब से बेहतर बनाते हैं।',
+      q4: 'ब्लॉक्ड अकाउंट में कितने पैसे दिखाने होते हैं?',
+      a4: '2026 के हिसाब से ब्लॉक्ड अकाउंट (Sperrkonto) के लिए क़रीब €12,408 प्रति वर्ष चाहिए। Fintiba या Expatrio जैसे प्रोवाइडर के साथ सेटअप में हम आपकी मदद करते हैं।',
+      q5: 'क्या मैं स्टूडेंट रहते हुए जर्मनी में काम कर सकता/सकती हूँ?',
+      a5: 'हाँ! इंटरनेशनल स्टूडेंट साल में 120 पूरे दिन या 240 आधे दिन काम कर सकते हैं। पढ़ाई के साथ फ़िट होने वाली Werkstudent जॉब ढूँढने में हम गाइड करते हैं।',
+      q6: 'अगर मेरी एप्लीकेशन रिजेक्ट हो जाए तो?',
+      a6: 'हम रिजेक्शन की वजह समझने और अगले साइकल की रणनीति बनाने में मदद करते हैं। एडमिशन के चांस बढ़ाने के लिए बैकअप यूनिवर्सिटी भी तय करते हैं।',
+      commEyebrow: 'हमारा फ़र्क़',
+      commP: 'आपको सिर्फ़ एक कंसल्टेंट नहीं मिलता। आपको जर्मनी भर में फैले हमारे भारतीय छात्रों और प्रोफ़ेशनल्स की कम्युनिटी मिलती है — वे लोग जिन्होंने हर वह कदम खुद उठाया है जो आप उठाने वाले हैं। अपने सवालों के जवाब उनसे पाइए जो पिछले साल आपकी जगह थे।',
+      commBtn: 'हमारी कम्युनिटी से जुड़ें →',
+      w1h: 'जर्मनी में असली मौजूदगी', w1p: 'इसकी नींव रखी है एक मास्टर्स स्टूडेंट ने, जो अभी जर्मनी में रहकर पढ़ रहा है। कोई कॉल-सेंटर कंसल्टेंसी नहीं।',
+      w2h: 'हर कदम पर साथ', w2p: 'SoP लिखने से लेकर आपकी पहली Ausländerbehörde अपॉइंटमेंट तक — हम वीज़ा मिलने पर नहीं रुकते।',
+      w3h: 'ईमानदार, पारदर्शी प्राइसिंग', w3p: 'कोई छिपा चार्ज नहीं। साफ़ सर्विस टियर। माइलस्टोन-आधारित पेमेंट। जो इस्तेमाल करें, वही चुकाएँ।',
+      w4h: 'कई भाषाओं में सपोर्ट', w4p: 'इंग्लिश, हिंदी, तमिल या Deutsch — जिस भाषा में आप सहज हों, उसी में बात कीजिए।',
+      founderName: 'फ़ाउंडर की ओर से',
+      founderP1: 'हर फ़ॉर्म, हर अपॉइंटमेंट, हर "अब क्या?" वाला पल। अचानक आने वाले खर्चे, हाउसिंग की भागदौड़, Ausländerbehörde की काग़ज़ी भूलभुलैया — सब मैंने जिया है।',
+      founderP2: 'मैंने Kompass Deutschland इसलिए बनाया ताकि किसी छात्र को यह रास्ता अकेले न चलना पड़े। अगर मैं कर सकता हूँ — तो आप ज़रूर कर सकते हैं।',
+      founderTitle: '— Theaneshwaran Ravi, मैनेजिंग डायरेक्टर',
+      cl0: 'जर्मनी', cl1: 'भारत', cl2: 'व्हाट्सएप', cl3: 'ईमेल',
+      waValue: 'हमसे बात करें',
+      formBtn: 'फ्री कॉल रिक्वेस्ट करें',
+      bookNote: 'यह फ़ॉर्म ईमेल या CRM इंटीग्रेशन के लिए तैयार है।',
+      foot1: '<strong>KOMPASS DEUTSCHLAND</strong> &nbsp;•&nbsp; एजुकेशनल कंसल्टेंसी &nbsp;•&nbsp; भारत → जर्मनी',
+      foot2: '© 2026 Kompass Deutschland. सर्वाधिकार सुरक्षित।',
+      phName: 'आपका नाम', phEmail: 'ईमेल एड्रेस', phPhone: 'फ़ोन नंबर',
+      phMsg: 'अपने जर्मनी सफ़र के बारे में बताइए',
+      opts: ['सेवा चुनें', 'यूनिवर्सिटी एप्लीकेशन', 'वीज़ा और डॉक्यूमेंटेशन', 'हाउसिंग और प्री-डिपार्चर', 'पोस्ट-अराइवल सेटलमेंट', 'जर्मन भाषा की पढ़ाई']
+    },
+    de: {
+      nav0: 'Leistungen', nav1: 'FAQ', nav2: 'Community', nav3: 'Warum wir', navCta: 'Gratis-Gespräch',
+      heroEyebrow: 'Indien → Deutschland • Rundum-Betreuung',
+      heroH1: 'Ihr <span class="highlight">Kompass</span> nach Deutschland.',
+      heroSub: 'Von der ersten Uni-Bewerbung bis zum Ankommen in einer deutschen Stadt — wir begleiten Sie bei jedem Schritt. Aufgebaut von jemandem, der diesen Weg selbst gegangen ist.',
+      heroBtn1: 'Kostenloses 30-Min-Gespräch buchen →', heroBtn2: '💬 Per WhatsApp schreiben',
+      s2n: '4 <span>Sprachen</span>', s3n: 'Vor <span>Ort</span>', s4n: 'Rundum-<span>Service</span>',
+      s1l: 'Fokus: Indien nach Deutschland', s3l: 'Wirklich präsent in Deutschland', s4l: 'Von Bewerbung bis Ankunft',
+      eyeServices: 'Was wir tun', eyeFaq: 'Häufige Fragen', eyeWhy: 'Warum Kompass Deutschland', eyeContact: 'Kontakt',
+      h2Services: 'Von der Bewerbung bis zur Ankunft — <br>und darüber hinaus.',
+      h2Faq: 'Häufig gestellte Fragen',
+      h2Community: 'Sprechen Sie mit Indern, die bereits in Deutschland leben.',
+      h2Why: 'Keine bloßen Berater. <br>Weggefährten.',
+      h2Founder: '„Ich bin genau diesen Weg selbst gegangen — von Coimbatore nach Chemnitz.“',
+      h2Contact: 'Sprechen wir über Ihren <br>Weg nach Deutschland.',
+      subServices: 'Die meisten Berater hören auf, sobald das Visum da ist. Wir fangen dort an und bleiben, bis sich Deutschland wie Zuhause anfühlt.',
+      subFaq: 'Alles, was Sie über den Weg nach Deutschland wissen müssen.',
+      subWhy: 'Wir haben das aufgebaut, weil wir es selbst vergeblich gesucht haben. Alles, was wir uns bei unserem Umzug gewünscht hätten — jetzt für Sie.',
+      subContact: 'Buchen Sie ein kostenloses 30-minütiges Erstgespräch. Unverbindlich. Einfach Klarheit.',
+      c1h: 'Uni-Bewerbung', c2h: 'Visum & Unterlagen', c3h: 'Vor der Abreise & Wohnen', c4h: 'Nach der Ankunft', c5h: 'Deutschunterricht',
+      li0: 'Shortlisting öffentlicher & privater Hochschulen', li1: 'SoP, LOR & Lebenslauf', li2: 'uni-assist-Koordination', li3: 'Einreichung & Nachverfolgung',
+      li4: 'APS-Zertifikat', li5: 'Sperrkonto (Fintiba / Expatrio)', li6: 'Krankenversicherung (TK / AOK)', li7: 'Vorbereitung aufs Botschaftsinterview',
+      li8: 'Wohnheim- & Wohnungssuche', li9: 'Prüfung des Mietvertrags', li10: 'Kulturelle Orientierung', li11: 'Abholung vom Flughafen',
+      li12: 'Anmeldung beim Bürgeramt', li13: 'Bankkonto, SIM, Nahverkehrsticket', li14: 'Behördengänge (Ausländerbehörde)', li15: 'Beratung zu Werkstudentenjobs',
+      li16: 'Strukturierte Kurse A1 → C1', li17: 'Medizinisches Deutsch für Fachkräfte', li18: 'Prüfungsvorbereitung (telc / Goethe)', li19: 'Übersetzungen & Lokalisierung',
+      q1: 'Wie lange dauert der gesamte Prozess von der Bewerbung bis zur Ankunft?',
+      a1: 'In der Regel 8–12 Monate, je nach Hochschule und Visabearbeitung. Wir teilen den Weg in klare Meilensteine auf und halten Sie auf Kurs.',
+      q2: 'Wie sind Ihre Gebühren aufgebaut?',
+      a2: 'Transparente, meilensteinbasierte Preise ohne versteckte Kosten. Pakete reichen von „Nur Bewerbung“ bis „Komplette Begleitung“. Sie zahlen nur, was Sie nutzen.',
+      q3: 'Muss ich schon im Ausland studiert haben, um an eine deutsche Hochschule zu kommen?',
+      a3: 'Nein. Viele Hochschulen nehmen Studierende mit guten Noten und Englischkenntnissen auf. Wir optimieren Ihr Profil für Ihre Wunschhochschulen.',
+      q4: 'Wie viel Geld brauche ich auf dem Sperrkonto?',
+      a4: 'Stand 2026 sind rund 12.408 € pro Jahr erforderlich. Wir begleiten Sie bei der Einrichtung, z. B. bei Fintiba oder Expatrio.',
+      q5: 'Darf ich als Student in Deutschland arbeiten?',
+      a5: 'Ja! Internationale Studierende dürfen 120 volle oder 240 halbe Tage pro Jahr arbeiten. Wir helfen, passende Werkstudentenjobs zu finden.',
+      q6: 'Was passiert, wenn meine Bewerbung abgelehnt wird?',
+      a6: 'Wir analysieren den Ablehnungsgrund und planen den nächsten Bewerbungszyklus. Zusätzlich identifizieren wir Backup-Hochschulen, um Ihre Chancen zu maximieren.',
+      commEyebrow: 'Unser Unterschied',
+      commP: 'Sie bekommen nicht nur einen Berater, sondern Zugang zu unserer Community indischer Studierender und Berufstätiger in ganz Deutschland — Menschen, die jeden Ihrer nächsten Schritte selbst erlebt haben.',
+      commBtn: 'Mit unserer Community verbinden →',
+      w1h: 'Wirklich vor Ort', w1p: 'Gegründet von einem Masterstudenten, der gerade in Deutschland lebt und studiert. Keine Callcenter-Beratung.',
+      w2h: 'Jeder Schritt begleitet', w2p: 'Vom SoP bis zum ersten Termin bei der Ausländerbehörde — bei uns endet die Betreuung nicht mit dem Visum.',
+      w3h: 'Ehrliche, transparente Preise', w3p: 'Keine versteckten Kosten. Klare Leistungsstufen. Zahlung nach Meilensteinen.',
+      w4h: 'Mehrsprachiger Support', w4p: 'Englisch, Hindi, Tamil oder Deutsch — sprechen Sie mit uns in der Sprache, in der Sie sich am wohlsten fühlen.',
+      founderName: 'Vom Gründer',
+      founderP1: 'Jedes Formular, jeder Termin, jeder „Was jetzt?“-Moment. Ich habe die Überraschungskosten, die Wohnungssuche und den Papierkram bei der Ausländerbehörde selbst erlebt.',
+      founderP2: 'Ich habe Kompass Deutschland gegründet, damit kein Student diesen Weg allein gehen muss. Wenn ich es geschafft habe — schaffen Sie es auch.',
+      founderTitle: '— Theaneshwaran Ravi, Geschäftsführer',
+      cl0: 'Deutschland', cl1: 'Indien', cl2: 'WhatsApp', cl3: 'E-Mail',
+      waValue: 'Schreiben Sie uns',
+      formBtn: 'Kostenloses Gespräch anfragen',
+      bookNote: 'Dieses Formular ist bereit für E-Mail- oder CRM-Anbindung.',
+      foot1: '<strong>KOMPASS DEUTSCHLAND</strong> &nbsp;•&nbsp; Bildungsberatung &nbsp;•&nbsp; Indien → Deutschland',
+      foot2: '© 2026 Kompass Deutschland. Alle Rechte vorbehalten.',
+      phName: 'Ihr Name', phEmail: 'E-Mail-Adresse', phPhone: 'Telefonnummer',
+      phMsg: 'Erzählen Sie uns von Ihrem Weg nach Deutschland',
+      opts: ['Leistung wählen', 'Uni-Bewerbung', 'Visum & Unterlagen', 'Wohnen & Vorbereitung', 'Ankommen & Behörden', 'Deutschunterricht']
+    }
+  };
+
+  // Snapshot the English text from the page itself
+  const enSnap = {};
+  I18N_TARGETS.forEach(([k, sel, i]) => {
+    const el = document.querySelectorAll(sel)[i];
+    if (el) enSnap[k] = el.innerHTML;
+  });
+  I18N_PH.forEach(([k, sel]) => {
+    const el = document.querySelector(sel);
+    if (el) enSnap[k] = el.placeholder;
+  });
+  const serviceSelect = document.querySelector('select[name="service"]');
+  enSnap.opts = serviceSelect ? Array.from(serviceSelect.options).map(o => o.textContent) : [];
+
+  function applyLang(lang) {
+    const dict = lang === 'en' ? enSnap : (I18N[lang] || {});
+    I18N_TARGETS.forEach(([k, sel, i]) => {
+      const el = document.querySelectorAll(sel)[i];
+      const val = dict[k] !== undefined ? dict[k] : enSnap[k];
+      if (el && val !== undefined) el.innerHTML = val;
+    });
+    I18N_PH.forEach(([k, sel]) => {
+      const el = document.querySelector(sel);
+      const val = dict[k] !== undefined ? dict[k] : enSnap[k];
+      if (el && val !== undefined) el.placeholder = val;
+    });
+    if (serviceSelect) {
+      const opts = dict.opts || enSnap.opts;
+      Array.from(serviceSelect.options).forEach((o, i) => { if (opts[i]) o.textContent = opts[i]; });
+    }
+    document.documentElement.lang = (lang === 'hi' || lang === 'de') ? lang : 'en';
+  }
+
+  // Language Switcher
+  const langBtns = document.querySelectorAll('.lang-btn');
+  langBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      langBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyLang(btn.getAttribute('data-lang'));
+    });
+  });
+
+  // FAQ Accordion
+  const faqTriggers = document.querySelectorAll('.faq-trigger');
+  faqTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const faqItem = trigger.parentElement;
+
+      document.querySelectorAll('.faq-item.active').forEach((item) => {
+        if (item !== faqItem) {
+          item.classList.remove('active');
+        }
+      });
+
+      faqItem.classList.toggle('active');
+    });
+  });
+
+  // Booking form submit feedback
+  const bookingForm = document.getElementById('bookingForm');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(bookingForm);
+      const name = formData.get('name') || 'Guest';
+      const email = formData.get('email') || '';
+      const service = formData.get('service') || '';
+      const phone = formData.get('phone') || '';
+      const message = formData.get('message') || '';
+
+      const subject = encodeURIComponent('New enquiry from Kompass Deutschland website');
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nService: ${service}\nPhone: ${phone}\nMessage: ${message}`
+      );
+
+      const mailtoLink = `mailto:hikompassdeutschland@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = mailtoLink;
+
+      const submitButton = bookingForm.querySelector('button');
+      if (submitButton) {
+        submitButton.textContent = 'Request Sent';
+        submitButton.disabled = true;
+      }
+    });
+  }
+</script>
+</body>
+</html>
